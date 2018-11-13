@@ -10,6 +10,7 @@ public class DatastructuresAssignment5 {
 	public static void startUp() {
 		int choice = 0;
 		String word;
+		boolean found = false;
 		Scanner scanNum = new Scanner ( System.in );
 
 		String[] english = {"Hello", "Goodbye", "Yes", "No", "Welcome", "Thank You", "Pardon Me", "Good Luck", 
@@ -22,6 +23,8 @@ public class DatastructuresAssignment5 {
 		
 
 		//prints the English array		
+		
+		do {
 			System.out.println("\nEnglish words or phrases that can be translated: ");
 		for(int i = 0; i < english.length; i++) {
 			System.out.println("-" + english[i] );
@@ -44,6 +47,9 @@ public class DatastructuresAssignment5 {
 			System.out.println("Translation: " + english[i]);//prints the translation
 		}
 		}
+		}while(found == false);
+		found = false;
+		
 		do {//loop until condition met
 		System.out.println("\nWould you like to translate again?"
 				+ "\n1. Yes"
