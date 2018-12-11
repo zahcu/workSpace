@@ -40,36 +40,41 @@ public class DatastructuresAssignment5 {
 		for(int i = 0; i < english.length; i++) {//seraches for the index of english[]
 		if(word.equalsIgnoreCase(english[i])) {//makes it so that it's not case sensitive and can take a lower case or upper case
 			System.out.println("Translation: " + korean[i]);//prints the translation
+			found = true;
 		}
 		}
 		for(int i = 0; i < korean.length; i ++) {//searches for the index of korean[]
 		if(word.equalsIgnoreCase(korean[i])) {//makes it so that it's not case sensitive and can take a lower case or upper case
 			System.out.println("Translation: " + english[i]);//prints the translation
+			found = true;
 		}
 		}
 		}while(found == false);
-		found = false;
 		
-		do {//loop until condition met
+		do {
+		//loop until condition met
 		System.out.println("\nWould you like to translate again?"
 				+ "\n1. Yes"
 				+ "\n2. No");
 		choice = scanNum.nextInt();//takes input
+	
+		
 		if (choice == 1) {//starts the program again
 			startUp();
 		}
 		else if(choice == 2) {//ends loop
 			System.out.println("Thank you for using the translator, goodbye.");
-			break;
+			System.exit(0);
 		}else {
 			System.out.println("Invalid Choice");//if user does not input valid choice
-		}
+		}	
+		}while(choice != 2);
 		
 		
 
 		
 		
-	}while(choice != 2);//while loop until choice is 2
+	//while loop until choice is 2
 	}
 }
 

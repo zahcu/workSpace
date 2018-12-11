@@ -1,7 +1,7 @@
 
 public class Meteorite {
 
-	String[] powers = {"Quirkless"};
+private	String[] powers = {"Quirkless"};
 	
 	public Meteorite() {}
 	

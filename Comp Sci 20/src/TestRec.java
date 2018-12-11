@@ -5,6 +5,7 @@ public class TestRec {
 		// TODO Auto-generated method stub
 		rec r1 = new rec();
 		rec r2 = new rec(5, 5, 25, 50);
+		
 		r2.translate(5,20);
 		System.out.println(r1.getX());
 		System.out.println(r1.toString());
